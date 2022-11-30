@@ -30,7 +30,6 @@ body {
           linear-gradient(to bottom, transparent, rgba(#fff, 0.4) 70%),
           #1e90ff;
   box-sizing: border-box;
-  height: 100vh;
   margin: 0;
   overflow-y: none;
   position: relative;
@@ -50,7 +49,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 103vh;
   padding: 112px 0;
 
   h1 {
@@ -72,27 +71,51 @@ body {
 }
 
 .overlay {
-  width: 100%;
-  max-width: 1140px;
-  max-height: 640px;
-  padding: 8rem 6rem;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: rgba(255, 255, 255, 0.375);
-  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 2rem;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-height: 640px;
+  max-width: 1140px;
+  padding: 2rem 6rem;
+  width: 100%;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
 
   &__inner {
-    max-width: 36rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &--left {
+      max-width: 36rem;
+    }
+
+    &--right {
+      img {
+        max-width: 200px;
+      }
+    }
   }
 
   &__title {
-    font-size: 1.875rem;
-    line-height: 2.75rem;
+    font-size: 50px;
+    line-height: 45px;
     font-weight: 700;
-    letter-spacing: -0.025em;
-    margin-bottom: 2rem;
+    margin: 20px 0 0;
+  }
+
+  &__artist {
+    margin-top: 5px;
   }
 
   &__description {
